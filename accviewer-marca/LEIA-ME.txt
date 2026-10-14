@@ -1,0 +1,26 @@
+ACCVIEWER - o acesso remoto da Accuracy Automation
+=================================================
+
+AccViewer e o RustDesk 1.5.0 (codigo aberto, licenca AGPL-3.0) com o nome, os
+icones, o servidor e a chave da Accuracy. Este ramo ("accviewer") so muda:
+
+  - nome do programa: AccViewer (pasta, servico, atalhos, janelas)
+  - icones e logos (desenhados a partir do "A" da Accuracy)
+  - servidor acesso.accuracyautomation.com:2091 e a chave publica dele,
+    embutidos (script marca-hbb-common.sh, roda durante a compilacao)
+  - robo de compilacao: so Windows 64 bits e Android
+
+O aviso de copyright e o "Powered by RustDesk" continuam, como a licenca pede.
+O codigo-fonte completo e este repositorio.
+
+Arquivos desta pasta
+  icone.svg, icone-frente.svg, icone-notificacao.svg, logo-*.svg  desenho
+  png\                 os SVG renderizados em tamanho grande
+  gerar-imagens.ps1    gera todos os tamanhos (.ico/.png) por cima dos do RustDesk
+  marca-hbb-common.sh  troca nome, servidor e chave no libs/hbb_common
+
+Compilar
+  Actions > "AccViewer - compilar Windows e Android" > Run workflow (ramo
+  accviewer). Leva cerca de 1 hora. Os arquivos saem em Releases > accviewer.
+  O Android so sai assinado (instalavel) com os 4 segredos ANDROID_* criados em
+  Settings > Secrets and variables > Actions.

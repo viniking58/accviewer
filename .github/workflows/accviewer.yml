@@ -1,0 +1,17 @@
+name: AccViewer - compilar Windows e Android
+
+# Gera o AccViewer (RustDesk com nome, icones, servidor e chave da Accuracy).
+# Dispara na aba Actions > "AccViewer - compilar Windows e Android" > Run workflow,
+# escolhendo o ramo "accviewer". Os arquivos saem na Release "accviewer".
+on:
+  workflow_dispatch:
+
+jobs:
+  compilar:
+    permissions:
+      contents: write
+    uses: ./.github/workflows/flutter-build.yml
+    secrets: inherit
+    with:
+      upload-artifact: true
+      upload-tag: "accviewer"
