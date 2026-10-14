@@ -1,7 +1,7 @@
-name: AccViewer - compilar Windows e Android
+name: AccViewer - compilar Windows
 
 # Gera o AccViewer (RustDesk com nome, icones, servidor e chave da Accuracy).
-# Dispara na aba Actions > "AccViewer - compilar Windows e Android" > Run workflow,
+# Dispara na aba Actions > "AccViewer - compilar Windows" > Run workflow,
 # escolhendo o ramo "accviewer". Os arquivos saem na Release "accviewer".
 on:
   workflow_dispatch:

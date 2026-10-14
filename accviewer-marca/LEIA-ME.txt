@@ -8,7 +8,7 @@ icones, o servidor e a chave da Accuracy. Este ramo ("accviewer") so muda:
   - icones e logos (desenhados a partir do "A" da Accuracy)
   - servidor acesso.accuracyautomation.com:2091 e a chave publica dele,
     embutidos (script marca-hbb-common.sh, roda durante a compilacao)
-  - robo de compilacao: so Windows 64 bits e Android
+  - robo de compilacao: so Windows 64 bits (Android desligado por enquanto)
 
 O aviso de copyright e o "Powered by RustDesk" continuam, como a licenca pede.
 O codigo-fonte completo e este repositorio.
@@ -20,7 +20,7 @@ Arquivos desta pasta
   marca-hbb-common.sh  troca nome, servidor e chave no libs/hbb_common
 
 Compilar
-  Actions > "AccViewer - compilar Windows e Android" > Run workflow (ramo
+  Actions > "AccViewer - compilar Windows" > Run workflow (ramo
   accviewer). Leva cerca de 1 hora. Os arquivos saem em Releases > accviewer.
   O Android so sai assinado (instalavel) com os 4 segredos ANDROID_* criados em
   Settings > Secrets and variables > Actions.
