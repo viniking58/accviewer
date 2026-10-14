@@ -355,9 +355,11 @@ jobs:
         if: env.UPLOAD_ARTIFACT == 'true'
         run: |
           sed -i '/dpiAware/d' res/manifest.xml
+          # AccViewer: o instalador procura o programa como <APP_NAME>.exe
+          mv ./rustdesk/rustdesk.exe ./rustdesk/AccViewer.exe
           pushd ./libs/portable
           pip3 install -r requirements.txt
-          python3 ./generate.py -f ../../rustdesk/ -o . -e ../../rustdesk/rustdesk.exe
+          python3 ./generate.py -f ../../rustdesk/ -o . -e ../../rustdesk/AccViewer.exe
           popd
           mkdir -p ./SignOutput
           mv ./target/release/rustdesk-portable-packer.exe ./SignOutput/AccViewer-${{ env.VERSION }}-${{ matrix.job.arch }}.exe
